@@ -17,7 +17,7 @@ public class WaveSpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemyInWave()
     {
-        if (_enemiesLeftToSpawn > 0)
+        if(_enemiesLeftToSpawn > 0)
         {
             yield return new WaitForSeconds(_waves[_currentWaveIndex]
                 .WaveSettings[_currentEnemyIndex]
@@ -48,7 +48,7 @@ public class WaveSpawner : MonoBehaviour
 }
 
 [System.Serializable]
-public class Waves
+public class Waves 
 {
     [SerializeField] private WaveSettings[] _waveSettings;
     public WaveSettings[] WaveSettings { get => _waveSettings; }
