@@ -983,7 +983,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252622417}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1248, y: -854, z: -53}
+  m_LocalPosition: {x: -50.7, y: -3, z: -3.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1210,7 +1210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436657791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7264151, g: 0.68187076, b: 0.68187076, a: 0.2627451}
+  m_Color: {r: 0.8773585, g: 0.8166607, b: 0.8166607, a: 0.2627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2244,7 +2244,7 @@ GameObject:
   - component: {fileID: 736565925}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Player
+  m_TagString: WhatIsPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2736,8 +2736,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 20
-  m_Acceleration: 8
+  m_Speed: 10
+  m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -2770,11 +2770,11 @@ MonoBehaviour:
     m_Bits: 64
   health: 100
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 5.46
+  walkPointRange: 10
   timeBetweenAttacks: 0.46
   projectile: {fileID: 0}
   sightRange: 20
-  attackRange: 0
+  attackRange: 5
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!33 &982784609
@@ -3317,7 +3317,23 @@ MonoBehaviour:
   - _waveSettings:
     - _enemy: {fileID: 982784605}
       _neededSpawner: {fileID: 1327950568}
+      _spawnDelay: 10
+    - _enemy: {fileID: 982784605}
+      _neededSpawner: {fileID: 252622417}
       _spawnDelay: 1
+    - _enemy: {fileID: 982784605}
+      _neededSpawner: {fileID: 1518558573}
+      _spawnDelay: 1
+    - _enemy: {fileID: 982784605}
+      _neededSpawner: {fileID: 1250977765}
+      _spawnDelay: 1
+    - _enemy: {fileID: 982784605}
+      _neededSpawner: {fileID: 1656431345}
+      _spawnDelay: 1
+  - _waveSettings:
+    - _enemy: {fileID: 982784605}
+      _neededSpawner: {fileID: 1327950568}
+      _spawnDelay: 10
     - _enemy: {fileID: 982784605}
       _neededSpawner: {fileID: 252622417}
       _spawnDelay: 1
@@ -3390,7 +3406,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250977765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -73.8}
+  m_LocalPosition: {x: -26, y: -3, z: 50.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3508,6 +3524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1327950569}
+  - component: {fileID: 1327950570}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -3530,6 +3547,21 @@ Transform:
   m_Father: {fileID: 1200721583}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1327950570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327950568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e69b90daae94d484e9e3fc336a42d57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 982784605}
+  spawnDelay: 1
+  numberOfEnemies: 7
 --- !u!1001 &1332809825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4322,7 +4354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518558573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9, y: -7.4, z: 27.6}
+  m_LocalPosition: {x: -27.3, y: -3, z: 27.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4798,7 +4830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656431345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 26.6}
+  m_LocalPosition: {x: 0, y: -3, z: 26.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5082,7 +5114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711537794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.435192, y: -10.8, z: -1.5701716}
+  m_LocalPosition: {x: -38.435192, y: -15.3, z: -1.5701716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5386,7 +5418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871685581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -484, y: -3.64, z: -484}
+  m_LocalPosition: {x: -484, y: -3.9, z: -484}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5941,6 +5973,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1699003366998098159, guid: a4723cf424abb434dbd51bdd8029f0a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490491065007874009, guid: a4723cf424abb434dbd51bdd8029f0a4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fe335f1a802f5c4b89c29265a993efe, type: 2}
     - target: {fileID: 6197211142036585159, guid: a4723cf424abb434dbd51bdd8029f0a4, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -5955,11 +5995,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6642897458026163278, guid: a4723cf424abb434dbd51bdd8029f0a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -49.4
+      value: -6.92
       objectReference: {fileID: 0}
     - target: {fileID: 6642897458026163278, guid: a4723cf424abb434dbd51bdd8029f0a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.8
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 6642897458026163278, guid: a4723cf424abb434dbd51bdd8029f0a4, type: 3}
       propertyPath: m_LocalPosition.z
