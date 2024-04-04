@@ -1,13 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private Waves[] _waves;
+    [SerializeField] private LineController[] _lineControllers;
+    public LineController[] LineControllers { get { return _lineControllers; } }
+    private static WaveSpawner instance;
+    public static WaveSpawner Instance { get { return instance; } }
     private int _currentEnemyIndex;
     private int _currentWaveIndex;
     private int _enemiesLeftToSpawn;
+
+    private void Awake()
+    {
+        if ( instance != null && instance != this)
+            Destroy(this.gameObject);
+        else
+            instance = this;
+    }
 
     private void Start()
     {
@@ -26,6 +40,8 @@ public class WaveSpawner : MonoBehaviour
                 .WaveSettings[_currentEnemyIndex].Enemy,
                 _waves[_currentWaveIndex].WaveSettings[_currentEnemyIndex]
                 .NeededSpawner.transform.position, Quaternion.identity);
+            _waves[_currentWaveIndex].WaveSettings[_currentEnemyIndex]
+                .NeededSpawner.GetComponent<LineController>().EnemiesAlive++;
             _enemiesLeftToSpawn--;
             _currentEnemyIndex++;
             StartCoroutine(SpawnEnemyInWave());

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8374096710474513105}
-  - component: {fileID: 2692324330048096359}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -27,26 +26,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.21, z: -3.805}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8374096710589342261}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2692324330048096359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8374096710474513111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8623f918e6f30af47a38f4b44e4e6fd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainRender: {fileID: 8374096710587441365}
-  Size: {x: 1, y: 1, z: 1}
 --- !u!1001 &8374096710589741237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64,15 +49,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52eeab1f0ce4d934591972b6df5d179b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.09
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52eeab1f0ce4d934591972b6df5d179b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.09
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52eeab1f0ce4d934591972b6df5d179b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.09
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52eeab1f0ce4d934591972b6df5d179b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -116,15 +101,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52eeab1f0ce4d934591972b6df5d179b, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52eeab1f0ce4d934591972b6df5d179b, type: 3}
---- !u!23 &8374096710587441365 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2300000, guid: 52eeab1f0ce4d934591972b6df5d179b, type: 3}
-  m_PrefabInstance: {fileID: 8374096710589741237}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8374096710589342261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 52eeab1f0ce4d934591972b6df5d179b, type: 3}

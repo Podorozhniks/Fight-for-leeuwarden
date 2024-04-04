@@ -17,4 +17,9 @@ public abstract class MinerTransition : MonoBehaviour
     {
         NeedSwitch = false;
     }
+
+    private void OnDisable()
+    {
+        NeedSwitch = false;
+    }
 }

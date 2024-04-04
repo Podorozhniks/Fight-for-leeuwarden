@@ -1,12 +1,24 @@
 using UnityEngine;
 
+public enum BuildingPartType
+{
+    Base,
+    Middle,
+    Top
+}
+
 public class BuildingGrid : MonoBehaviour
 {
-    public Vector3Int GridSize = new Vector3Int(10, 10, 10); // Now including a Y dimension
+    public Vector3Int GridSize; // Set this in the Unity Inspector
+    public Building[,,] grid; // A 3D grid to store buildings
 
-    public Building[,,] grid; // A 3D grid
-    private Building flyingBuilding;
-    private Camera mainCamera;
+    private Building flyingBuilding; // The building currently being moved before placement
+    private Camera mainCamera; // Reference to the main camera for raycasting
+
+    // Assign these in the Unity Editor
+    public Building baseBuildingPrefab;
+    public Building middleBuildingPrefab;
+    public Building topBuildingPrefab;
 
     private void Awake()
     {
@@ -21,8 +33,22 @@ public class BuildingGrid : MonoBehaviour
             Destroy(flyingBuilding.gameObject);
         }
         flyingBuilding = Instantiate(buildingPrefab);
-        MiningTransition miningTransition = GetComponent<MiningTransition>();
-        miningTransition.IsBuildingPlaced = true;
+    }
+
+    // Connect these methods to UI buttons for placing buildings
+    public void PlaceBase()
+    {
+        StartPlacingBuilding(baseBuildingPrefab);
+    }
+
+    public void PlaceMiddle()
+    {
+        StartPlacingBuilding(middleBuildingPrefab);
+    }
+
+    public void PlaceTop()
+    {
+        StartPlacingBuilding(topBuildingPrefab);
     }
 
     private void Update()
@@ -30,38 +56,68 @@ public class BuildingGrid : MonoBehaviour
         if (flyingBuilding != null)
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit))
+            RaycastHit hit; // Declare 'hit' here to be in scope for later use.
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                Vector3 worldPosition = hit.point;
-                int x = Mathf.RoundToInt(worldPosition.x);
-                int z = Mathf.RoundToInt(worldPosition.z);
-                float y = Terrain.activeTerrain.SampleHeight(worldPosition);
+                Vector3Int gridPosition = GetGridPosition(hit.point);
+                Building belowBuilding = GetBuildingAt(gridPosition.x, gridPosition.y - 1, gridPosition.z);
 
-                bool available = true;
-                if (x < 0 || x >= GridSize.x - flyingBuilding.Size.x) available = false;
-                if (z < 0 || z >= GridSize.z - flyingBuilding.Size.z) available = false;
-                // Y dimension check can be more complex, depending on how you manage vertical stacking or terrain adaptation
-
-                flyingBuilding.transform.position = new Vector3(x, y, z);
-                flyingBuilding.SetTransparent(available);
-
-                if (available && Input.GetMouseButtonDown(0))
+                if (flyingBuilding.partType == BuildingPartType.Base && belowBuilding == null ||
+                    flyingBuilding.partType == BuildingPartType.Middle && belowBuilding?.partType == BuildingPartType.Base ||
+                    flyingBuilding.partType == BuildingPartType.Top && belowBuilding?.partType == BuildingPartType.Middle)
                 {
-                    PlaceBuilding(x, Mathf.RoundToInt(y), z);
+                    flyingBuilding.transform.position = belowBuilding != null ? belowBuilding.topSocket.position : hit.point;
+                    flyingBuilding.SetTransparent(true);
+
+                    if (Input.GetMouseButtonDown(0)) // Left mouse button
+                    {
+                        PlaceBuilding(gridPosition.x, gridPosition.y, gridPosition.z);
+                    }
+                }
+                else
+                {
+                    flyingBuilding.SetTransparent(false);
                 }
             }
         }
     }
 
+    private Vector3Int GetGridPosition(Vector3 worldPosition)
+    {
+        // Example implementation for GetGridPosition
+        // This would need to be adjusted to your specific game grid logic
+        int x = Mathf.FloorToInt(worldPosition.x);
+        int y = 0; // Assuming ground level is 0 and you'll adjust this for stacking logic
+        int z = Mathf.FloorToInt(worldPosition.z);
+        return new Vector3Int(x, y, z);
+    }
+
+    private bool IsPositionValid(int x, int y, int z)
+    {
+        // Example implementation for IsPositionValid
+        // Check that the position is within the bounds of the grid
+        return x >= 0 && x < GridSize.x &&
+               y >= 0 && y < GridSize.y &&
+               z >= 0 && z < GridSize.z;
+    }
+
+    private Building GetBuildingAt(int x, int y, int z)
+    {
+        // Check the bounds of the grid first
+        if (x >= 0 && x < GridSize.x && y >= 0 && y < GridSize.y && z >= 0 && z < GridSize.z)
+        {
+            return grid[x, y, z];
+        }
+        return null;
+    }
+
     private void PlaceBuilding(int x, int y, int z)
     {
-        if (flyingBuilding != null /* && check for position validity */)
+        if (IsPositionValid(x, y, z))
         {
-            flyingBuilding.SetNormal();
             grid[x, y, z] = flyingBuilding;
-            flyingBuilding = null;
+            flyingBuilding.SetNormal();
+            flyingBuilding = null; // Reset after placement
         }
-        
-
     }
 }
