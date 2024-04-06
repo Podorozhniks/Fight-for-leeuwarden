@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class BuildingGrid : MonoBehaviour
 {
-    public Vector3Int GridSize; // Set this in the Unity Inspector
-    public Building[,,] grid; // A 3D grid to store buildings
+    public Vector3Int GridSize;
+    public Building[,,] grid; 
 
-    private Building flyingBuilding; // The building currently being moved before placement
-    private Camera mainCamera; // Reference to the main camera for raycasting
+    [SerializeField] private GameObject playerCamera;
+    [SerializeField] private GameObject topDownCamera; 
 
-    // Assign these in the Unity Editor
+    private Building flyingBuilding;
+
     public Building baseBuildingPrefab;
     public Building middleBuildingPrefab;
     public Building topBuildingPrefab;
@@ -16,7 +17,6 @@ public class BuildingGrid : MonoBehaviour
     private void Awake()
     {
         grid = new Building[GridSize.x, GridSize.y, GridSize.z];
-        mainCamera = Camera.main;
     }
 
     public void StartPlacingBuilding(Building buildingPrefab)
@@ -28,7 +28,6 @@ public class BuildingGrid : MonoBehaviour
         flyingBuilding = Instantiate(buildingPrefab);
     }
 
-    // Connect these methods to UI buttons for placing buildings
     public void PlaceBase()
     {
         StartPlacingBuilding(baseBuildingPrefab);
@@ -46,37 +45,53 @@ public class BuildingGrid : MonoBehaviour
 
     private void Update()
     {
-        if (flyingBuilding != null)
+        Camera currentCamera = GetCurrentActiveCamera();
+        if (flyingBuilding != null && currentCamera != null)
         {
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = currentCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                Vector3Int gridPosition = GetGridPosition(hit.point);
-                Building buildingAtPosition = GetBuildingAt(gridPosition.x, gridPosition.y, gridPosition.z);
+                Vector3 worldPosition = hit.point;
+                Vector3Int gridPosition = GetGridPosition(worldPosition);
 
-                if (buildingAtPosition == null)
+                bool isValidPosition = IsPositionValid(gridPosition.x, gridPosition.y, gridPosition.z);
+                flyingBuilding.SetTransparent(isValidPosition);
+
+                flyingBuilding.transform.position = worldPosition; 
+
+                
+                if (Input.GetKeyDown(KeyCode.R))
                 {
-                    flyingBuilding.transform.position = hit.point; // Position at the hit point on the ground
-                    flyingBuilding.SetTransparent(true);
-
-                    if (Input.GetMouseButtonDown(0)) // Left mouse button
-                    {
-                        PlaceBuilding(gridPosition.x, gridPosition.y, gridPosition.z);
-                    }
+                    RotateBuilding();
                 }
-                else
+
+                
+                if (isValidPosition && Input.GetMouseButtonDown(0)) 
                 {
-                    flyingBuilding.SetTransparent(false);
+                    PlaceBuilding(gridPosition.x, gridPosition.y, gridPosition.z);
                 }
             }
         }
     }
 
+    private Camera GetCurrentActiveCamera()
+    {
+        if (topDownCamera != null && topDownCamera.activeInHierarchy)
+        {
+            return topDownCamera.GetComponent<Camera>();
+        }
+        else if (playerCamera != null && playerCamera.activeInHierarchy)
+        {
+            return playerCamera.GetComponent<Camera>();
+        }
+        return null;
+    }
+
     private Vector3Int GetGridPosition(Vector3 worldPosition)
     {
         int x = Mathf.FloorToInt(worldPosition.x);
-        int y = 0; // This assumes you're placing buildings on a flat surface at y = 0
+        int y = 0; 
         int z = Mathf.FloorToInt(worldPosition.z);
         return new Vector3Int(x, y, z);
     }
@@ -88,7 +103,7 @@ public class BuildingGrid : MonoBehaviour
 
     private Building GetBuildingAt(int x, int y, int z)
     {
-        if (IsPositionValid(x, y, z))
+        if (x >= 0 && x < GridSize.x && y >= 0 && y < GridSize.y && z >= 0 && z < GridSize.z)
         {
             return grid[x, y, z];
         }
@@ -101,8 +116,17 @@ public class BuildingGrid : MonoBehaviour
         {
             grid[x, y, z] = flyingBuilding;
             flyingBuilding.SetNormal();
-            flyingBuilding = null; // Reset after placement
+            flyingBuilding = null; 
+        }
+    }
+
+    private void RotateBuilding()
+    {
+        if (flyingBuilding != null)
+        {
+            flyingBuilding.transform.Rotate(0, 45, 0);
         }
     }
 }
+
 

@@ -2,20 +2,30 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    public Renderer MainRenderer; // This should be your building's renderer
-    // Other properties and methods as needed for the Building class
+    public Renderer mainRenderer; 
 
-    // Methods like SetTransparent and SetNormal should be defined here
+    
     public void SetTransparent(bool available)
     {
-        MainRenderer.material.color = available ? new Color(1, 1, 1, 0.5f) : new Color(1, 0, 0, 0.5f);
+        if (available)
+        {
+            
+            mainRenderer.material.color = Color.green;
+        }
+        else
+        {
+            
+            mainRenderer.material.color = Color.red;
+        }
     }
-
+    
     public void SetNormal()
     {
-        MainRenderer.material.color = new Color(1, 1, 1, 1);
+        mainRenderer.material.color = Color.white;
     }
 }
+
+
 
 
 
