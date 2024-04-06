@@ -4,6 +4,7 @@ using UnityEngine;
 
 
 
+<<<<<<< HEAD
 public class Sword : MonoBehaviour
 {
     
@@ -21,5 +22,30 @@ public class Sword : MonoBehaviour
             enemy.HitBySword(damage);
         }
     }
+=======
+public class swordScript : MonoBehaviour
+{
+
+    public WeaponController wc;
+    //public GameObject HitParticle;
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy" && wc.IsAttacking)
+        {
+            Debug.Log(other.name);
+            Destroy(other.gameObject);
+
+            //Instantiate(HitParticle, new Vector3(other.transform.position.x,
+            //    transform.position.y,other.transform.position.z),
+            //   other.transform.rotation);
+
+        }
+    }
+
+
+
+>>>>>>> origin/Artem_Dorozhkin
 }
 
