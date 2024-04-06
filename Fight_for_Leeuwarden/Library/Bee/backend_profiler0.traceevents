@@ -1,5 +1,6 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ,{ "pid":12345, "tid":0, "ts":1712431124636894, "dur":607, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
 ,{ "pid":12345, "tid":0, "ts":1712431124637507, "dur":221, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
 ,{ "pid":12345, "tid":0, "ts":1712431124637765, "dur":35, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
@@ -693,6 +694,8 @@
 ,{ "pid":12345, "tid":24, "ts":1712431124793620, "dur":228, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
 ,{ "pid":12345, "tid":0, "ts":1712431124798599, "dur":1444, "ph":"X", "name": "ProfilerWriteOutput" }
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
 ,{ "pid":12345, "tid":0, "ts":1712418423318938, "dur":8528, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
 ,{ "pid":12345, "tid":0, "ts":1712418423327473, "dur":219, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
 ,{ "pid":12345, "tid":0, "ts":1712418423327725, "dur":26, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
@@ -2011,5 +2014,8 @@
 ,{ "pid":12345, "tid":24, "ts":1712418423371457, "dur":206, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
 ,{ "pid":12345, "tid":24, "ts":1712418423371663, "dur":750, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
 ,{ "pid":12345, "tid":0, "ts":1712418423375514, "dur":3012, "ph":"X", "name": "ProfilerWriteOutput" }
+<<<<<<< HEAD
+>>>>>>> parent of 13a1c3e (14 th commit)
+=======
 >>>>>>> parent of 13a1c3e (14 th commit)
 ,

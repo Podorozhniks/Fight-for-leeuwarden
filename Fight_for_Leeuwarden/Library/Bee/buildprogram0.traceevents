@@ -2,6 +2,7 @@
 { "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
 { "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
 <<<<<<< HEAD
+<<<<<<< HEAD
 { "pid": 35942, "tid": 1, "ts": 1712430843978976, "dur": 256496, "ph": "X", "name": "BuildProgram", "args": {} },
 { "pid": 35942, "tid": 1, "ts": 1712430843979994, "dur": 73278, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
 { "pid": 35942, "tid": 1, "ts": 1712430844193748, "dur": 3841, "ph": "X", "name": "OutputData.Write", "args": {} },
@@ -10,6 +11,8 @@
 { "pid": 35942, "tid": 1, "ts": 1712430844239004, "dur": 953, "ph": "X", "name": "", "args": {} },
 { "pid": 35942, "tid": 1, "ts": 1712430844238392, "dur": 1601, "ph": "X", "name": "Write chrome-trace events", "args": {} },
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
 { "pid": 35942, "tid": 1, "ts": 1712151382500702, "dur": 166230, "ph": "X", "name": "BuildProgram", "args": {} },
 { "pid": 35942, "tid": 1, "ts": 1712151382501393, "dur": 41400, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
 { "pid": 35942, "tid": 1, "ts": 1712151382639148, "dur": 2184, "ph": "X", "name": "OutputData.Write", "args": {} },
@@ -17,4 +20,7 @@
 { "pid": 35942, "tid": 1, "ts": 1712151382641794, "dur": 20024, "ph": "X", "name": "JsonToString", "args": {} },
 { "pid": 35942, "tid": 1, "ts": 1712151382672791, "dur": 901, "ph": "X", "name": "", "args": {} },
 { "pid": 35942, "tid": 1, "ts": 1712151382672162, "dur": 1560, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+<<<<<<< HEAD
+>>>>>>> parent of 13a1c3e (14 th commit)
+=======
 >>>>>>> parent of 13a1c3e (14 th commit)

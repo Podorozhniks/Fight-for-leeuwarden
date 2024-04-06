@@ -1504,7 +1504,10 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
 --- !u!1001 &320380135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1645,6 +1648,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 47ea17677478db44d82a92d078b09fa6, type: 3}
   m_PrefabInstance: {fileID: 356011699}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+>>>>>>> parent of 13a1c3e (14 th commit)
+=======
 >>>>>>> parent of 13a1c3e (14 th commit)
 --- !u!1 &364725203
 GameObject:
@@ -2791,10 +2797,14 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 9
 =======
   m_RootOrder: 30
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 10
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 10
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -3331,12 +3341,16 @@ RectTransform:
   - {fileID: 643338145}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 15
 =======
   - {fileID: 906129306}
   m_Father: {fileID: 900064578}
   m_RootOrder: 0
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 16
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 16
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -4386,6 +4400,7 @@ CapsuleCollider:
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &982784613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4400,6 +4415,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 =======
 >>>>>>> origin/Artem_Dorozhkin
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
 >>>>>>> parent of 13a1c3e (14 th commit)
 --- !u!1001 &984421413
@@ -4791,10 +4808,14 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 13
 =======
   m_RootOrder: 33
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 14
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 14
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -4973,10 +4994,14 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 10
 =======
   m_RootOrder: 35
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 11
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 11
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -5136,10 +5161,14 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 12
 =======
   m_RootOrder: 34
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 13
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 13
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -6186,6 +6215,7 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54b5e5bde4d7f1049ab87964fcb8e3c1, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1455729095
 GameObject:
   m_ObjectHideFlags: 0
@@ -6321,6 +6351,8 @@ CanvasRenderer:
   m_GameObject: {fileID: 1455729095}
   m_CullTransparentMesh: 1
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
 --- !u!1001 &1458640314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6383,6 +6415,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6f2ee188b14f53d47b8d0e7b6081e547, type: 3}
   m_PrefabInstance: {fileID: 1458640314}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+>>>>>>> parent of 13a1c3e (14 th commit)
+=======
 >>>>>>> parent of 13a1c3e (14 th commit)
 --- !u!224 &1463486936 stripped
 RectTransform:
@@ -7527,10 +7562,14 @@ RectTransform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 8
 =======
   m_RootOrder: 29
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 9
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 9
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -8375,10 +8414,14 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 11
 =======
   m_RootOrder: 32
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 12
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 12
 >>>>>>> parent of 13a1c3e (14 th commit)

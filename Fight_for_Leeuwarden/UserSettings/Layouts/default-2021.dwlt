@@ -49,7 +49,11 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 12117}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 61
+=======
+  controlID: 70
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   controlID: 70
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -69,9 +73,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1955
     y: 0
     width: 605
+=======
+    x: 1953
+    y: 0
+    width: 607
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
     x: 1953
     y: 0
@@ -104,8 +114,11 @@ MonoBehaviour:
     y: 0
     width: 484
 <<<<<<< HEAD
+<<<<<<< HEAD
     height: 770
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
     height: 1009
 >>>>>>> parent of 13a1c3e (14 th commit)
   m_MinSize: {x: 201, y: 221}
@@ -242,7 +255,11 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1955
+=======
+    width: 1953
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
     width: 1953
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -251,7 +268,11 @@ MonoBehaviour:
   m_MaxSize: {x: 8096, y: 12117}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 62
+=======
+  controlID: 71
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   controlID: 71
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -275,6 +296,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1955
     height: 770
   m_MinSize: {x: 403, y: 221}
@@ -282,12 +304,17 @@ MonoBehaviour:
   vertical: 0
   controlID: 63
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
     width: 1953
     height: 1009
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
   controlID: 72
+<<<<<<< HEAD
+>>>>>>> parent of 13a1c3e (14 th commit)
+=======
 >>>>>>> parent of 13a1c3e (14 th commit)
 --- !u!114 &11
 MonoBehaviour:
@@ -377,15 +404,21 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 98570000
     m_LastClickedID: 22424
     m_ExpandedIDs: 000000003a570000
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
     scrollPos: {x: 0, y: 45.666687}
     m_SelectedIDs: a25b0000
     m_LastClickedID: 23458
     m_ExpandedIDs: 00000000a25b0000a45b0000a65b000000ca9a3b
+<<<<<<< HEAD
+>>>>>>> parent of 13a1c3e (14 th commit)
+=======
 >>>>>>> parent of 13a1c3e (14 th commit)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -415,7 +448,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000003a570000
+=======
+    m_ExpandedIDs: 00000000a25b0000a45b0000a65b0000
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
     m_ExpandedIDs: 00000000a25b0000a45b0000a65b0000
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -495,9 +532,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1955
     y: 73
     width: 604
+=======
+    x: 1953
+    y: 73
+    width: 606
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
     x: 1953
     y: 73
@@ -546,8 +589,11 @@ MonoBehaviour:
     y: 73
     width: 483
 <<<<<<< HEAD
+<<<<<<< HEAD
     height: 749
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
     height: 988
 >>>>>>> parent of 13a1c3e (14 th commit)
   m_ViewDataDictionary: {fileID: 0}
@@ -559,9 +605,15 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 46fbffff
       m_LastClickedID: -1210
       m_ExpandedIDs: 46fbffff
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 36fbffff1e580000a4580000
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
       m_SelectedIDs: 
       m_LastClickedID: 0
@@ -745,8 +797,11 @@ MonoBehaviour:
       collapsed: 0
       displayed: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
       snapOffset: {x: 0, y: 0}
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
       snapOffset: {x: -181.33337, y: -61.333313}
 >>>>>>> parent of 13a1c3e (14 th commit)
       snapOffsetDelta: {x: 0, y: 0}
@@ -854,9 +909,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -552.9905, y: 1165.114, z: 18.148193}
     speed: 2
     m_Value: {x: -552.9905, y: 1165.114, z: 18.148193}
+=======
+    m_Target: {x: -39.083214, y: 23.799046, z: 12.796104}
+    speed: 2
+    m_Value: {x: -39.083214, y: 23.799046, z: 12.796104}
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
     m_Target: {x: -39.083214, y: 23.799046, z: 12.796104}
     speed: 2
@@ -909,6 +970,7 @@ MonoBehaviour:
     m_gridOpacity: 0.5
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0.04131063, y: -0.90178394, z: 0.088485606, w: 0.42101365}
     speed: 2
     m_Value: {x: -0.041310567, y: 0.9017826, z: -0.08848547, w: -0.421013}
@@ -916,6 +978,15 @@ MonoBehaviour:
     m_Target: 55011.523
     speed: 2
     m_Value: 57603.688
+=======
+    m_Target: {x: 0.087646715, y: 0.90952826, z: -0.32275692, w: 0.24696563}
+    speed: 2
+    m_Value: {x: 0.08727241, y: 0.90997154, z: -0.32137817, w: 0.247086}
+  m_Size:
+    m_Target: 58.813904
+    speed: 2
+    m_Value: 56.281246
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
     m_Target: {x: 0.087646715, y: 0.90952826, z: -0.32275692, w: 0.24696563}
     speed: 2
@@ -970,15 +1041,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 507
     y: 94
     width: 1532
     height: 790
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
     x: 327.33334
     y: 80
     width: 968.6666
     height: 603.6667
+<<<<<<< HEAD
+>>>>>>> parent of 13a1c3e (14 th commit)
+=======
 >>>>>>> parent of 13a1c3e (14 th commit)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -992,7 +1069,11 @@ MonoBehaviour:
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_TargetSize: {x: 1532, y: 769}
+=======
+  m_TargetSize: {x: 968.6666, y: 582.6667}
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_TargetSize: {x: 968.6666, y: 582.6667}
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -1011,15 +1092,21 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -766
     m_HBaseRangeMax: 766
     m_VBaseRangeMin: -384.5
     m_VBaseRangeMax: 384.5
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
     m_HBaseRangeMin: -484.3333
     m_HBaseRangeMax: 484.3333
     m_VBaseRangeMin: -291.33334
     m_VBaseRangeMax: 291.33334
+<<<<<<< HEAD
+>>>>>>> parent of 13a1c3e (14 th commit)
+=======
 >>>>>>> parent of 13a1c3e (14 th commit)
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
@@ -1039,10 +1126,17 @@ MonoBehaviour:
       x: 0
       y: 21
 <<<<<<< HEAD
+<<<<<<< HEAD
       width: 1532
       height: 769
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 766, y: 384.5}
+=======
+      width: 968.6666
+      height: 582.6667
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 484.3333, y: 291.33334}
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
       width: 968.6666
       height: 582.6667
@@ -1056,6 +1150,7 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
       x: -766
       y: -384.5
       width: 1532
@@ -1063,6 +1158,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1532, y: 790}
+=======
+      x: -484.3333
+      y: -291.33334
+      width: 968.6666
+      height: 582.6667
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 968.6666, y: 603.6667}
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
       x: -484.3333
       y: -291.33334
