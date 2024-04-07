@@ -1,13 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":-552.990478515625,"y":1165.114013671875,"z":18.148193359375},"rotation":{"x":0.0413106307387352,"y":-0.9017839431762695,"z":0.08848560601472855,"w":0.42101365327835085},"size":55011.5234375,"orthographic":false}
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":-39.083213806152347,"y":23.79904556274414,"z":12.796104431152344},"rotation":{"x":0.0876467153429985,"y":0.9095282554626465,"z":-0.32275691628456118,"w":0.24696563184261323},"size":58.81390380859375,"orthographic":false}
->>>>>>> parent of 13a1c3e (14 th commit)
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":-39.083213806152347,"y":23.79904556274414,"z":12.796104431152344},"rotation":{"x":0.0876467153429985,"y":0.9095282554626465,"z":-0.32275691628456118,"w":0.24696563184261323},"size":58.81390380859375,"orthographic":false}
->>>>>>> parent of 13a1c3e (14 th commit)
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":-39.083213806152347,"y":23.79904556274414,"z":12.796104431152344},"rotation":{"x":0.0876467153429985,"y":0.9095282554626465,"z":-0.32275691628456118,"w":0.24696563184261323},"size":58.81390380859375,"orthographic":false}
->>>>>>> parent of 13a1c3e (14 th commit)
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":-35.909027099609378,"y":42.92839431762695,"z":174.82742309570313},"rotation":{"x":0.07383765280246735,"y":-0.5058245062828064,"z":0.04351156949996948,"w":0.8583687543869019},"size":78.67279052734375,"orthographic":false}

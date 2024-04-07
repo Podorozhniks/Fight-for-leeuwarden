@@ -1506,7 +1506,10 @@ RectTransform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
 >>>>>>> parent of 13a1c3e (14 th commit)
 =======
@@ -1653,6 +1656,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 13a1c3e (14 th commit)
+=======
 >>>>>>> parent of 13a1c3e (14 th commit)
 =======
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -2805,10 +2811,14 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 9
 =======
   m_RootOrder: 30
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 10
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 10
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -3353,12 +3363,16 @@ RectTransform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 15
 =======
   - {fileID: 906129306}
   m_Father: {fileID: 900064578}
   m_RootOrder: 0
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 16
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 16
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -4416,6 +4430,7 @@ CapsuleCollider:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &982784613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4430,6 +4445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 =======
 >>>>>>> origin/Artem_Dorozhkin
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
 >>>>>>> parent of 13a1c3e (14 th commit)
 =======
@@ -4827,10 +4844,14 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 13
 =======
   m_RootOrder: 33
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 14
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 14
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -5017,10 +5038,14 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 10
 =======
   m_RootOrder: 35
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 11
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 11
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -5188,10 +5213,14 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 12
 =======
   m_RootOrder: 34
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 13
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 13
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -6246,6 +6275,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1455729095
 GameObject:
   m_ObjectHideFlags: 0
@@ -6385,6 +6415,8 @@ CanvasRenderer:
 >>>>>>> parent of 13a1c3e (14 th commit)
 =======
 >>>>>>> parent of 13a1c3e (14 th commit)
+=======
+>>>>>>> parent of 13a1c3e (14 th commit)
 --- !u!1001 &1458640314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6449,6 +6481,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 13a1c3e (14 th commit)
+=======
 >>>>>>> parent of 13a1c3e (14 th commit)
 =======
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -7599,10 +7634,14 @@ RectTransform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 8
 =======
   m_RootOrder: 29
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 9
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 9
 >>>>>>> parent of 13a1c3e (14 th commit)
@@ -8455,10 +8494,14 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 11
 =======
   m_RootOrder: 32
 >>>>>>> origin/Artem_Dorozhkin
+=======
+  m_RootOrder: 12
+>>>>>>> parent of 13a1c3e (14 th commit)
 =======
   m_RootOrder: 12
 >>>>>>> parent of 13a1c3e (14 th commit)
