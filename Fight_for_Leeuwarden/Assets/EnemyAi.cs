@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
@@ -18,9 +17,10 @@ public class EnemyAi : MonoBehaviour
     public float walkPointRange;
 
     //Attacking
-    public float timeBetweenAttacks;
-    bool alreadyAttacked;
-    public GameObject projectile;
+    ///public float timeBetweenAttacks;
+    /// <summary>
+    /// public float timeBetweenAttacks;
+    /// </summary>c GameObject projectile;
 
     //States
     public float sightRange, attackRange;
@@ -40,7 +40,9 @@ public class EnemyAi : MonoBehaviour
 
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        //  if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        ///if (playerInAttackRange && playerInSightRange) 
+
     }
 
     private void Patroling()
@@ -73,40 +75,40 @@ public class EnemyAi : MonoBehaviour
         agent.SetDestination(player.position);
     }
 
-    private void AttackPlayer()
-    {
-        ///Make sure enemy doesn't move
-        agent.SetDestination(transform.position);
+    ///private void AttackPlayer()
+    //{
+    ///Make sure enemy doesn't move
+    // agent.SetDestination(transform.position);
 
-        transform.LookAt(player);
+    //  transform.LookAt(player);
 
-        if (!alreadyAttacked)
-        {
-            ///Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-            ///End of attack code
+    //  if (!alreadyAttacked)
+    //  {
+    ///Attack code here
+    //   Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+    //   rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+    //     rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+    ///End of attack code
 
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        }
-    }
-    private void ResetAttack()
-    {
-        alreadyAttacked = false;
-    }
+    // alreadyAttacked = true;
+    //    Invoke(nameof(ResetAttack), timeBetweenAttacks);
+    //   }
+    //  }
+    //  private void ResetAttack()
+    //  {
+    //      alreadyAttacked = false;
+    // }
 
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
+    // public void TakeDamage(int damage)
+    // {
+    //   health -= damage;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
-    }
-    private void DestroyEnemy()
-    {
-        Destroy(gameObject);
-    }
+    //  if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+    // }
+    //  private void DestroyEnemy()
+    // {
+    //     Destroy(gameObject);
+    //   }
 
     private void OnDrawGizmosSelected()
     {
@@ -116,3 +118,4 @@ public class EnemyAi : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 }
+
