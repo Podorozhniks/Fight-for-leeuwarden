@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3464480534721678946}
   - component: {fileID: 689411440280116251}
   - component: {fileID: 7449515334335522105}
-  - component: {fileID: 3731554983433917459}
+  - component: {fileID: 538027737016639385}
   m_Layer: 0
   m_Name: arrow2.0
   m_TagString: Untagged
@@ -115,7 +115,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.057269733, y: 0.04914578, z: 0.019999994}
   m_Center: {x: 0.00191411, y: 0.007861714, z: 0.000099113655}
---- !u!114 &3731554983433917459
+--- !u!114 &538027737016639385
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,8 +124,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3104302584726876087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19dd2da9972a59444a3bd3c86aedcb7c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6eb3102ad5f17e3428efb3dcc94faad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 34.1
-  damage: 50

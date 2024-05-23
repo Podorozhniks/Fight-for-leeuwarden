@@ -4,8 +4,14 @@ using UnityEngine.AI;
 public class EnemyAi : MonoBehaviour
 {
     public NavMeshAgent agent;
+
     public Transform player;
-    public LayerMask whatIsGround, whatIsPlayer;
+    public Transform tower;
+
+    public LayerMask whatIsGround, whatIsPlayer, whatIsTower;
+
+    public GameObject MainTower;
+
     public float health;
 
     // Patroling
@@ -13,12 +19,19 @@ public class EnemyAi : MonoBehaviour
     bool walkPointSet;
     public float walkPointRange;
 
+    // Attacking
+    /// public float timeBetweenAttacks;
+    /// <summary>
+    /// public float timeBetweenAttacks;
+    /// </summary>c GameObject projectile;
+
     // States
-    public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public float sightRange, attackRange, towerRange;
+    public bool playerInSightRange, playerInAttackRange, towerInSightRange;
 
     private void Awake()
     {
+        tower = GameObject.Find("TowerObj").transform;
         player = GameObject.Find("PlayerObj").transform;
         agent = GetComponent<NavMeshAgent>();
     }
@@ -28,22 +41,15 @@ public class EnemyAi : MonoBehaviour
         // Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        towerInSightRange = Physics.CheckSphere(transform.position, towerRange, whatIsTower);
 
-        if (!playerInSightRange && !playerInAttackRange) Patroling();
+        if (!playerInSightRange && !playerInAttackRange) Assaulting();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
     }
 
-    private void Patroling()
+    private void Assaulting()
     {
-        if (!walkPointSet) SearchWalkPoint();
-        if (walkPointSet)
-            agent.SetDestination(walkPoint);
-
-        Vector3 distanceToWalkPoint = transform.position - walkPoint;
-
-        // Walkpoint reached
-        if (distanceToWalkPoint.magnitude < 1f)
-            walkPointSet = false;
+        agent.SetDestination(tower.position);
     }
 
     private void SearchWalkPoint()
@@ -81,5 +87,4 @@ public class EnemyAi : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 }
-
 
