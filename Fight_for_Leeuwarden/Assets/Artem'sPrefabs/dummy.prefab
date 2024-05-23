@@ -153,19 +153,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1901734031}
   player: {fileID: 0}
+  tower: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
+  whatIsTower:
+    serializedVersion: 2
+    m_Bits: 256
+  MainTower: {fileID: 5498117711600884679, guid: 32b2e075389c0d84e9262dc557358ac9, type: 3}
   health: 0
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   sightRange: 50
   attackRange: 4
+  towerRange: 0
   playerInSightRange: 0
   playerInAttackRange: 0
+  towerInSightRange: 0
 --- !u!195 &1901734031
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -3,10 +3,10 @@ using UnityEngine;
 public class BuildingGrid : MonoBehaviour
 {
     public Vector3Int GridSize;
-    public Building[,,] grid; 
+    public Building[,,] grid;
 
     [SerializeField] private GameObject playerCamera;
-    [SerializeField] private GameObject topDownCamera; 
+    [SerializeField] private GameObject topDownCamera;
 
     private Building flyingBuilding;
 
@@ -26,6 +26,13 @@ public class BuildingGrid : MonoBehaviour
             Destroy(flyingBuilding.gameObject);
         }
         flyingBuilding = Instantiate(buildingPrefab);
+
+        // Disable the BoxCollider while placing
+        BoxCollider collider = flyingBuilding.GetComponent<BoxCollider>();
+        if (collider != null)
+        {
+            collider.enabled = false;
+        }
     }
 
     public void PlaceBase()
@@ -58,16 +65,14 @@ public class BuildingGrid : MonoBehaviour
                 bool isValidPosition = IsPositionValid(gridPosition.x, gridPosition.y, gridPosition.z);
                 flyingBuilding.SetTransparent(isValidPosition);
 
-                flyingBuilding.transform.position = worldPosition; 
+                flyingBuilding.transform.position = worldPosition;
 
-                
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     RotateBuilding();
                 }
 
-                
-                if (isValidPosition && Input.GetMouseButtonDown(0)) 
+                if (isValidPosition && Input.GetMouseButtonDown(0))
                 {
                     PlaceBuilding(gridPosition.x, gridPosition.y, gridPosition.z);
                 }
@@ -91,7 +96,7 @@ public class BuildingGrid : MonoBehaviour
     private Vector3Int GetGridPosition(Vector3 worldPosition)
     {
         int x = Mathf.FloorToInt(worldPosition.x);
-        int y = 0; 
+        int y = 0;
         int z = Mathf.FloorToInt(worldPosition.z);
         return new Vector3Int(x, y, z);
     }
@@ -116,7 +121,15 @@ public class BuildingGrid : MonoBehaviour
         {
             grid[x, y, z] = flyingBuilding;
             flyingBuilding.SetNormal();
-            flyingBuilding = null; 
+
+            // Enable the BoxCollider after placing
+            BoxCollider collider = flyingBuilding.GetComponent<BoxCollider>();
+            if (collider != null)
+            {
+                collider.enabled = true;
+            }
+
+            flyingBuilding = null;
         }
     }
 
@@ -128,5 +141,6 @@ public class BuildingGrid : MonoBehaviour
         }
     }
 }
+
 
 

@@ -6,64 +6,56 @@ public class EnemyAi : MonoBehaviour
     public NavMeshAgent agent;
 
     public Transform player;
+    public Transform tower;
 
-    public LayerMask whatIsGround, whatIsPlayer;
+    public LayerMask whatIsGround, whatIsPlayer, whatIsTower;
+
+    public GameObject MainTower;
 
     public float health;
 
-    //Patroling
+    // Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
 
-    //Attacking
-    ///public float timeBetweenAttacks;
+    // Attacking
+    /// public float timeBetweenAttacks;
     /// <summary>
     /// public float timeBetweenAttacks;
     /// </summary>c GameObject projectile;
 
-    //States
-    public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
+    // States
+    public float sightRange, attackRange, towerRange;
+    public bool playerInSightRange, playerInAttackRange, towerInSightRange;
 
     private void Awake()
     {
+        tower = GameObject.Find("TowerObj").transform;
         player = GameObject.Find("PlayerObj").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
     {
-        //Check for sight and attack range
+        // Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        towerInSightRange = Physics.CheckSphere(transform.position, towerRange, whatIsTower);
 
-        if (!playerInSightRange && !playerInAttackRange) Patroling();
+        if (!playerInSightRange && !playerInAttackRange) Assaulting();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        //  if (playerInAttackRange && playerInSightRange) AttackPlayer();
-        ///if (playerInAttackRange && playerInSightRange) 
-
     }
 
-    private void Patroling()
+    private void Assaulting()
     {
-        if (!walkPointSet) SearchWalkPoint();
-
-        if (walkPointSet)
-            agent.SetDestination(walkPoint);
-
-        Vector3 distanceToWalkPoint = transform.position - walkPoint;
-
-        //Walkpoint reached
-        if (distanceToWalkPoint.magnitude < 1f)
-            walkPointSet = false;
+        agent.SetDestination(tower.position);
     }
+
     private void SearchWalkPoint()
     {
-        //Calculate random point in range
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
-
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
@@ -75,40 +67,17 @@ public class EnemyAi : MonoBehaviour
         agent.SetDestination(player.position);
     }
 
-    ///private void AttackPlayer()
-    //{
-    ///Make sure enemy doesn't move
-    // agent.SetDestination(transform.position);
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
 
-    //  transform.LookAt(player);
+        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+    }
 
-    //  if (!alreadyAttacked)
-    //  {
-    ///Attack code here
-    //   Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-    //   rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-    //     rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-    ///End of attack code
-
-    // alreadyAttacked = true;
-    //    Invoke(nameof(ResetAttack), timeBetweenAttacks);
-    //   }
-    //  }
-    //  private void ResetAttack()
-    //  {
-    //      alreadyAttacked = false;
-    // }
-
-    // public void TakeDamage(int damage)
-    // {
-    //   health -= damage;
-
-    //  if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
-    // }
-    //  private void DestroyEnemy()
-    // {
-    //     Destroy(gameObject);
-    //   }
+    private void DestroyEnemy()
+    {
+        Destroy(gameObject);
+    }
 
     private void OnDrawGizmosSelected()
     {
