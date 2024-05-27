@@ -60,6 +60,7 @@ public class WeaponController : MonoBehaviour
         else
         {
             Animator anim2 = Shield.GetComponent<Animator>();
+            anim2.ResetTrigger("idle");
             anim2.SetTrigger("block");
             BlockedDamageMultiplier = 0.1f;
             CanAttack = false;
