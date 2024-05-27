@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using UnityEngine.AI;
+﻿using UnityEngine.AI;
+using UnityEngine;
+
 
 public class EnemyAi : MonoBehaviour
 {
@@ -57,7 +58,6 @@ public class EnemyAi : MonoBehaviour
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
     }
@@ -87,4 +87,9 @@ public class EnemyAi : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 }
+
+
+
+
+
 
