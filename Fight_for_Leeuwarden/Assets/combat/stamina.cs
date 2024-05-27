@@ -23,7 +23,7 @@ public class stamina : MonoBehaviour
         IsAttacking = WeaponController.IsAttacking;
         if (IsAttacking == false)
         {
-            Stamina= Stamina + 0.05f;
+            Stamina= Stamina + 0.5f;
             Attacked = false;
         }
         else if (IsAttacking == true && Attacked == false)

@@ -7832,6 +7832,26 @@ PrefabInstance:
       propertyPath: stamina
       value: 
       objectReference: {fileID: 443552161}
+    - target: {fileID: 2192465329250826848, guid: b5efc994f1de99c4a8323cf4072d21f1, type: 3}
+      propertyPath: m_Size.z
+      value: 0.73377615
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192465329250826848, guid: b5efc994f1de99c4a8323cf4072d21f1, type: 3}
+      propertyPath: m_Center.x
+      value: 0.00000013605438
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192465329250826848, guid: b5efc994f1de99c4a8323cf4072d21f1, type: 3}
+      propertyPath: m_Center.y
+      value: 0.00000023651012
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192465329250826848, guid: b5efc994f1de99c4a8323cf4072d21f1, type: 3}
+      propertyPath: m_Center.z
+      value: 0.22477454
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192465329250826848, guid: b5efc994f1de99c4a8323cf4072d21f1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2192465329260188929, guid: b5efc994f1de99c4a8323cf4072d21f1, type: 3}
       propertyPath: orientation
       value: 

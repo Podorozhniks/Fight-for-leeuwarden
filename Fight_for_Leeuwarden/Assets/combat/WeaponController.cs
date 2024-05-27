@@ -5,11 +5,14 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     public GameObject Sword;
+    public GameObject Shield;
     public stamina stamina;
     public float Stamina = 50;
     public bool CanAttack = true;
+    public bool CanBash = false;
     public float AttackCooldown = 0.01f;
     public bool IsAttacking = false;
+    public bool ShieldUp = false;
 
 
     // Start is called before the first frame update
@@ -21,18 +24,64 @@ public class WeaponController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!Input.GetMouseButton(1))
+        {
+            ShieldUp = false;
+        }
+
+            if (Input.GetMouseButton(1) && Stamina > 5)
+            {
+                ShieldUp = true;
+            }
+ 
+
+        switch (ShieldUp) {
+            case false:
+                Animator anim = Shield.GetComponent<Animator>();
+                anim.ResetTrigger("block");
+                anim.SetTrigger("idle");
+                CanAttack = true;
+
+                break;
+            case true:
+                Animator anim2 = Shield.GetComponent<Animator>();
+                if (CanBash = true)
+                {
+                    anim2.ResetTrigger("idle");
+                    anim2.SetTrigger("block");
+                }
+                CanAttack = false;
+
+                if (Input.GetMouseButtonDown(0) && Stamina > 10 && CanBash) 
+                {
+                    ShieldBash();
+                    CanBash = false;
+                }
+
+                break; }
+
+
         Stamina = stamina.Stamina;
         if (Input.GetMouseButtonDown(0))
         {
-            if (CanAttack && Stamina >15)
+            if (CanAttack && Stamina > 15)
             {
-                SwordAttack();         
-            
+                SwordAttack();
+
             }
-                
+
         }
 
 
+    }
+    public void ShieldBash()
+    {
+        IsAttacking = true;
+        CanBash = false;
+        Animator anim = Shield.GetComponent<Animator>();
+        anim.ResetTrigger("block");
+        anim.SetTrigger("bash");
+        StartCoroutine(ResetAttackBool2());
     }
 
     public void SwordAttack()
@@ -48,9 +97,16 @@ public class WeaponController : MonoBehaviour
 
     IEnumerator ResetAttackBool()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         IsAttacking = false;
         CanAttack = true;
+    }
+
+    IEnumerator ResetAttackBool2()
+    {
+        yield return new WaitForSeconds(0.2f);
+        IsAttacking = false;
+        CanBash = true;
     }
 
 }
