@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
         while (currentEnemiesSpawned < numberOfEnemies)
         {
 
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            Instantiate(enemyPrefab, transform);
             currentEnemiesSpawned++;
 
 

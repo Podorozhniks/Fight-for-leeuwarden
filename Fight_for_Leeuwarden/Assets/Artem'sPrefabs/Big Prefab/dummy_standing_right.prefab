@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7510355295567536647}
   - component: {fileID: 3573492648644288482}
   m_Layer: 7
-  m_Name: dummy
+  m_Name: dummy_standing_right
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

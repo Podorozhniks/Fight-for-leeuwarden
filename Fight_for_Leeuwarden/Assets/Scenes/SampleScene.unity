@@ -1820,6 +1820,11 @@ MonoBehaviour:
   baseBuildingPrefab: {fileID: 4742607003784944509, guid: 32b2e075389c0d84e9262dc557358ac9, type: 3}
   middleBuildingPrefab: {fileID: 3200650009571825587, guid: 702256f56afa0f140a4f64b94ff86573, type: 3}
   topBuildingPrefab: {fileID: 25772438557419566, guid: 938f6ecacc0bf8f4688ff6edce79493e, type: 3}
+  moveSpeedX: 10
+  moveSpeedZ: 10
+  terrainLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1955286017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2811,6 +2816,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4049255882138778063, guid: 8c2a091ec6c00134aa98616bb843ac85, type: 3}
+      propertyPath: jumpAction.m_Id
+      value: a8d4566b-4ca8-48e8-8dd9-14a19ec6a1c6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049255882138778063, guid: 8c2a091ec6c00134aa98616bb843ac85, type: 3}
+      propertyPath: moveAction.m_Id
+      value: 2df41e4f-4bfe-46b1-86e2-1a2790bf8cd3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049255882138778063, guid: 8c2a091ec6c00134aa98616bb843ac85, type: 3}
+      propertyPath: crouchAction.m_Id
+      value: 02d03eab-9336-4de4-8b63-1623cff75587
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049255882138778063, guid: 8c2a091ec6c00134aa98616bb843ac85, type: 3}
+      propertyPath: sprintAction.m_Id
+      value: ccb9a53a-9f3f-4b11-b9ea-e733d5efc755
+      objectReference: {fileID: 0}
     - target: {fileID: 4852383548238282785, guid: 8c2a091ec6c00134aa98616bb843ac85, type: 3}
       propertyPath: WeaponController
       value: 
@@ -3017,6 +3038,14 @@ PrefabInstance:
       propertyPath: stamina
       value: 
       objectReference: {fileID: 736565925}
+    - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
+      propertyPath: attackAction.m_Id
+      value: e541ba6d-b6ed-40b1-84a8-a7f0da3f91c2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
+      propertyPath: attackAction.m_Name
+      value: Attack
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
 --- !u!1001 &7299014253947542152
