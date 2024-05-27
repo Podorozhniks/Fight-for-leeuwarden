@@ -53,6 +53,15 @@ public partial class @Player_controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""block"",
+                    ""type"": ""Button"",
+                    ""id"": ""7190f8fa-1dce-491b-8c53-cb3f92635b35"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -88,6 +97,17 @@ public partial class @Player_controls: IInputActionCollection2, IDisposable
                     ""action"": ""rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1dda048f-0a3f-4f5f-93c1-f9b769298671"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""block"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -99,6 +119,7 @@ public partial class @Player_controls: IInputActionCollection2, IDisposable
         m_gameplay_attack = m_gameplay.FindAction("attack", throwIfNotFound: true);
         m_gameplay_move = m_gameplay.FindAction("move", throwIfNotFound: true);
         m_gameplay_rotate = m_gameplay.FindAction("rotate", throwIfNotFound: true);
+        m_gameplay_block = m_gameplay.FindAction("block", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -163,6 +184,7 @@ public partial class @Player_controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_gameplay_attack;
     private readonly InputAction m_gameplay_move;
     private readonly InputAction m_gameplay_rotate;
+    private readonly InputAction m_gameplay_block;
     public struct GameplayActions
     {
         private @Player_controls m_Wrapper;
@@ -170,6 +192,7 @@ public partial class @Player_controls: IInputActionCollection2, IDisposable
         public InputAction @attack => m_Wrapper.m_gameplay_attack;
         public InputAction @move => m_Wrapper.m_gameplay_move;
         public InputAction @rotate => m_Wrapper.m_gameplay_rotate;
+        public InputAction @block => m_Wrapper.m_gameplay_block;
         public InputActionMap Get() { return m_Wrapper.m_gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -188,6 +211,9 @@ public partial class @Player_controls: IInputActionCollection2, IDisposable
             @rotate.started += instance.OnRotate;
             @rotate.performed += instance.OnRotate;
             @rotate.canceled += instance.OnRotate;
+            @block.started += instance.OnBlock;
+            @block.performed += instance.OnBlock;
+            @block.canceled += instance.OnBlock;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -201,6 +227,9 @@ public partial class @Player_controls: IInputActionCollection2, IDisposable
             @rotate.started -= instance.OnRotate;
             @rotate.performed -= instance.OnRotate;
             @rotate.canceled -= instance.OnRotate;
+            @block.started -= instance.OnBlock;
+            @block.performed -= instance.OnBlock;
+            @block.canceled -= instance.OnBlock;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -223,5 +252,6 @@ public partial class @Player_controls: IInputActionCollection2, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
+        void OnBlock(InputAction.CallbackContext context);
     }
 }

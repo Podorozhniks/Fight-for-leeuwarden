@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.002680765, g: 0.28729847, b: 0.30505028, a: 1}
+  m_IndirectSpecularColor: {r: 0.0026807657, g: 0.2872985, b: 0.3050503, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -872,7 +872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7121443681715252036, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
       propertyPath: field of view
-      value: 101
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7121443681715252038, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
       propertyPath: m_IsActive
@@ -924,11 +924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
       propertyPath: bashAction.m_SingletonActionBindings.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
       propertyPath: blockAction.m_SingletonActionBindings.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
       propertyPath: attackAction.m_SingletonActionBindings.Array.size
@@ -947,8 +947,16 @@ PrefabInstance:
       value: 8798a217-a038-4d4a-95d1-c0f4deab4d06
       objectReference: {fileID: 0}
     - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
+      propertyPath: bashAction.m_SingletonActionBindings.Array.data[3].m_Id
+      value: 2bb5a00e-bd5a-4405-8608-257766598fb8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
       propertyPath: blockAction.m_SingletonActionBindings.Array.data[0].m_Id
       value: 3d3cdce7-74be-41ad-bce1-21db1d2a10e9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
+      propertyPath: blockAction.m_SingletonActionBindings.Array.data[1].m_Id
+      value: de3c5971-e60a-441f-80bf-bc99ff49a44a
       objectReference: {fileID: 0}
     - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
       propertyPath: attackAction.m_SingletonActionBindings.Array.data[0].m_Id
@@ -983,6 +991,10 @@ PrefabInstance:
       value: <Gamepad>/rightTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
+      propertyPath: bashAction.m_SingletonActionBindings.Array.data[3].m_Path
+      value: <Mouse>/leftButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
       propertyPath: bashAction.m_SingletonActionBindings.Array.data[0].m_Flags
       value: 4
       objectReference: {fileID: 0}
@@ -997,6 +1009,10 @@ PrefabInstance:
     - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
       propertyPath: blockAction.m_SingletonActionBindings.Array.data[0].m_Path
       value: <Gamepad>/leftTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
+      propertyPath: blockAction.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <Mouse>/rightButton
       objectReference: {fileID: 0}
     - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
       propertyPath: attackAction.m_SingletonActionBindings.Array.data[0].m_Path
@@ -1019,7 +1035,15 @@ PrefabInstance:
       value: Bash
       objectReference: {fileID: 0}
     - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
+      propertyPath: bashAction.m_SingletonActionBindings.Array.data[3].m_Action
+      value: Bash
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
       propertyPath: blockAction.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
+      propertyPath: blockAction.m_SingletonActionBindings.Array.data[1].m_Action
       value: Block
       objectReference: {fileID: 0}
     - target: {fileID: 7121443682521124744, guid: babbc7911d7beb34babb55801fc9368e, type: 3}
@@ -1694,15 +1718,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565599194304236070, guid: 2b1d462da2124824b915ad5069031a22, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4
+      value: -1.174
       objectReference: {fileID: 0}
     - target: {fileID: 7565599194304236070, guid: 2b1d462da2124824b915ad5069031a22, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.305
+      value: -0.714
       objectReference: {fileID: 0}
     - target: {fileID: 7565599194304236070, guid: 2b1d462da2124824b915ad5069031a22, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 0.935
       objectReference: {fileID: 0}
     - target: {fileID: 7565599194304236070, guid: 2b1d462da2124824b915ad5069031a22, type: 3}
       propertyPath: m_LocalRotation.w
