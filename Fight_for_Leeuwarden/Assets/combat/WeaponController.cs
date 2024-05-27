@@ -8,8 +8,9 @@ public class WeaponController : MonoBehaviour
     public GameObject Shield;
     public stamina stamina;
     public float Stamina = 50;
+    public float BlockedDamageMultiplier = 1f;
     public bool CanAttack = true;
-    public bool CanBash = false;
+    public bool CanBash = true;
     public float AttackCooldown = 0.01f;
     public bool IsAttacking = false;
     public bool ShieldUp = false;
@@ -29,10 +30,10 @@ public class WeaponController : MonoBehaviour
             ShieldUp = false;
         }
 
-            if (Input.GetMouseButton(1) && Stamina > 5)
-            {
-                ShieldUp = true;
-            }
+        if (Input.GetMouseButton(1) && Stamina > 5)
+        {
+            ShieldUp = true;
+        }
  
 
         switch (ShieldUp) {
@@ -41,12 +42,17 @@ public class WeaponController : MonoBehaviour
                 anim.ResetTrigger("block");
                 anim.SetTrigger("idle");
                 CanAttack = true;
+                BlockedDamageMultiplier = 1f;
 
                 break;
             case true:
                 Animator anim2 = Shield.GetComponent<Animator>();
+               // anim2.ResetTrigger("idle");
+                //anim2.SetTrigger("block");
+                BlockedDamageMultiplier = 0.1f;
                 if (CanBash = true)
                 {
+                    Debug.Log("can bash");
                     anim2.ResetTrigger("idle");
                     anim2.SetTrigger("block");
                 }
