@@ -16,71 +16,54 @@ public class WeaponController : MonoBehaviour
     public bool ShieldUp = false;
 
     public InputAction attackAction; // Define an InputAction for attack
+    public InputAction blockAction; // Define an InputAction for block
+    public InputAction bashAction; // Define an InputAction for shield bash
 
     void OnEnable()
     {
-        // Enable the attack action
+        // Enable the input actions
         attackAction.Enable();
+        blockAction.Enable();
+        bashAction.Enable();
     }
 
     void OnDisable()
     {
-        // Disable the attack action
+        // Disable the input actions
         attackAction.Disable();
+        blockAction.Disable();
+        bashAction.Disable();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         Stamina = stamina.Stamina;
-        // Register the callback for the attack action
+        // Register the callbacks for the input actions
         attackAction.performed += context => OnAttack();
+        blockAction.performed += context => OnBlock();
+        blockAction.canceled += context => OnBlockEnd();
+        bashAction.performed += context => OnBash();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!Input.GetMouseButton(1))
+        if (!ShieldUp)
         {
-            ShieldUp = false;
+            Animator anim = Shield.GetComponent<Animator>();
+            anim.ResetTrigger("block");
+            anim.SetTrigger("idle");
+            CanAttack = true;
+            BlockedDamageMultiplier = 1f;
         }
-
-        if (Input.GetMouseButton(1) && Stamina > 5)
+        else
         {
-            ShieldUp = true;
+            Animator anim2 = Shield.GetComponent<Animator>();
+            anim2.SetTrigger("block");
+            BlockedDamageMultiplier = 0.1f;
+            CanAttack = false;
         }
- 
-
-        switch (ShieldUp) {
-            case false:
-                Animator anim = Shield.GetComponent<Animator>();
-                anim.ResetTrigger("block");
-                anim.SetTrigger("idle");
-                CanAttack = true;
-                BlockedDamageMultiplier = 1f;
-
-                break;
-            case true:
-                Animator anim2 = Shield.GetComponent<Animator>();
-               // anim2.ResetTrigger("idle");
-                //anim2.SetTrigger("block");
-                BlockedDamageMultiplier = 0.1f;
-                if (CanBash = true)
-                {
-                    Debug.Log("can bash");
-                    anim2.ResetTrigger("idle");
-                    anim2.SetTrigger("block");
-                }
-                CanAttack = false;
-
-                if (Input.GetMouseButtonDown(0) && Stamina > 10 && CanBash) 
-                {
-                    ShieldBash();
-                    CanBash = false;
-                }
-
-                break; }
-
 
         Stamina = stamina.Stamina;
     }
@@ -89,15 +72,32 @@ public class WeaponController : MonoBehaviour
     {
         if (CanAttack && Stamina > 15)
         {
-            if (CanAttack && Stamina > 15)
-            {
-                SwordAttack();
-
-            }
-
             SwordAttack();
         }
     }
+
+    private void OnBlock()
+    {
+        if (Stamina > 5)
+        {
+            ShieldUp = true;
+        }
+    }
+
+    private void OnBlockEnd()
+    {
+        ShieldUp = false;
+    }
+
+    private void OnBash()
+    {
+        if (ShieldUp && Stamina > 10 && CanBash)
+        {
+            ShieldBash();
+            CanBash = false;
+        }
+    }
+
     public void ShieldBash()
     {
         IsAttacking = true;
@@ -130,8 +130,8 @@ public class WeaponController : MonoBehaviour
         IsAttacking = false;
         CanBash = true;
     }
-
 }
+
 
 
 
